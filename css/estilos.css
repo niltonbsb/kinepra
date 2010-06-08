@@ -1,0 +1,31 @@
+.principal{
+	margin:0px auto;
+	width:100%;
+	height:auto;
+}
+.cabecera{
+	width:100%;
+	height:114px;
+}
+.logo_cabecera{
+	
+}
+.logo_pie{
+	
+}
+.navegacion{
+	float:left;
+	margin:0px;
+	padding:0px;
+	padding-top:12px;
+	padding-bottom:10px;
+	width:100%;
+	height:13px;
+	text-align:left;
+	vertical-align:top;
+}
+.contenedor{
+	float:left;
+	width:inherit;
+	padding-top:30px;
+}
