@@ -8,10 +8,19 @@
 	height:114px;
 }
 .logo_cabecera{
+	background-image: url(../img/cabecera.jpg);
+   background-repeat: no-repeat;
+   float: left;
+   height: 365px;
+   width: 990px
 	
 }
 .logo_pie{
-	
+	background-image: url(../img/pie.jpg);
+   background-repeat: no-repeat;
+   float: left;
+   height: 150px;
+   width: 990px
 }
 .navegacion{
 	float:left;

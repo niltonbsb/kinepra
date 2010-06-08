@@ -6,17 +6,17 @@
 <body>
 <div class="principal">
 	<div class="cabecera">
-		<div class="logo_cabecera">logoo cabecera</div>
+		<div class="logo_cabecera"></div>
 	</div>
 	<div class="navegacion">
-	<a href="#">ADMINISTRADOR</a>
+	<a href="administrador.php">ADMINISTRADOR</a>
 	<a href="#">USUARIO</a>
 	</div>
 	<div class="contenedor">
-	<p>Bienvenido al Sistema de Registro y Reservas de Pacientes para el Consultorio Kinepra</p>
+	<h2>Bienvenido al Sistema de Registro y Reservas de Pacientes para el Consultorio Kinepra</h2>
 	</div>
 	<div class="pie">
-		<div class="logo_pie"> logo pie</div>
+		<div class="logo_pie"></div>
 	</div>
 </div>
 </body>
