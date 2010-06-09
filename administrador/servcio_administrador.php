@@ -2,6 +2,19 @@
 <head>
 	<link rel="stylesheet" href="../css/estilos.css" type="text/css"/>
 	<title>Sistema de Registro y Reservas de Pacientes</title>
+	<script type="text/javascript" src="../script/prototype.lite.js"></script>
+    <script type="text/javascript" src="../script/moo.ajax.js"></script>
+    <script type="text/javascript">
+
+function CargarFormulario1(){
+  var postString = "";
+  new ajax('crear_usuario.php', {postBody: postString, update: 'formulario'});
+}
+function CargarFormulario2(){
+  var postString = "";
+  new ajax('cambiar_contraseña.php', {postBody: postString, update: 'formulario'}); 
+}
+</script>
 </head>
 <body>
 <div class="principal">
@@ -9,21 +22,13 @@
 		<div class="logo_cabecera"></div>
 	</div>
 	<div class="navegacion">
-	<a href="administrador.php">ADMINISTRADOR</a>
-	<a href="#">USUARIO</a>
+	<a onclick="CargarFormulario1()">Crear Usuarios</a>
+	<a onclick="CargarFormulario2()">Cambiar Contraseña</a>
+	<a href="#">Cambiar Administrador</a>
+	<a href="../index.php">Cerrar Sesion</a>
 	</div>
-	<div class="contenedor">
+	<div class="contenedor" id="formulario">
 	
-	<label>Seleccione el tipo de Historia Clincia:</label>
-			<form name="form_hisotria_clinica" action="#" method="">
-					<select id="tipo_historia" name="tipo_historia">
-                		<option value="">Seleccione</option>
-                		<option value="">Historia clinica uno</option>
-                		<option value="">Historia clinica dos</option>
-                		<option value="">Historia clinica tres</option>
-            		</select>
-            		<input type="submit" value="Aceptar" class="Button" onclick="return validar_admin()"/>
-            </form>	
 	</div>
 	<div class="pie">
 		<div class="logo_pie"></div>
