@@ -1,8 +1,57 @@
-
-<form>
-Nombre:<input type="text" name="nom_usuario"/><br />
-Apellido:<input type="text" name="apell_usuario"/><br />
-Edad:<input type="text" name="edad_usuario"/><br />
-Otros:<input type="text" name=""/><br />
-<input type="submit" value="ingresar"/><br/>
+<? 
+include("../includes/conexion.php");
+?>
+<form name="formulario_usuario" action="" method="GET" >
+<table align="center">
+<tr>
+	<td>Nombre Completo:</td> <td><input type="text" id="nombre_usuario"/><td>
+</tr>
+<tr>
+	<td>Direccion:</td> <td><input type="text" id="direccion_usuario"/></td>
+</tr>
+<tr>
+	<td>Telefono:</td> <td><input type="text" id="fono_usuario"/></td>
+</tr>
+<tr>
+	<td>Login:</td> <td><input type="text" id="login_usuario"/></td>
+</tr>
+<tr>
+	<td>Contraseña:</td> <td><input type="text" id="contraseña_usuario"/></td>
+</tr>
+</table>
+<center><input type="submit" value="ingresar"/></center>
 </form>
+<?
+$nombre_usuario=$_GET['nombre_usuario'];
+$direccion_usuario=$_GET['direccion_usuario'];
+$fono=$_GET['fono_usuario'];
+$login_usuario=$_GET['login_usuario'];
+$contraseña_usuario=$_GET['contraseña_usuario'];
+if($nombre_usuario!=null&&$direccion_usuario!=null&&$fono!=null&&$login_usuario!=null&&$contraseña_usuario!=null){
+mysql_query ("INSERT INTO usuarios (nombre_usuario, direccion_usuario, telefono_usuario, login_usuario, pass_usuario, estado)values('$nombre','$direccion','$fono','$login_usuario','$contraseña_usuario',1)");
+}
+?>
+
+<table align="center" border="1">
+				<tr><td>Nro</td><td>Nombre</td><td>Direccion</td><td>Telefono</td><td>Login</td><td>Password</td><td>Bloquear</td><td>Eliminar</td></tr>
+			<? $aux=mysql_query("SELECT * FROM usuarios WHERE estado=1");
+			   while($aux1=mysql_fetch_array($aux)){
+			   	$numero=$aux1['id_usuario'];
+			   	$nombre=$aux1['nombre_usuario'];
+			   	$direccion=$aux1['direccion_usuario'];
+			   	$telefono=$aux1['telefono_usuario'];
+			    $login=$aux1['login_usuario'];
+			    $pass=$aux1['pass_usuario'];?>
+			   
+			   	<tr class="fila">
+			   <td><?echo("$numero");?></td>
+			   <td><?echo("$nombre");?></td>
+			   <td><?echo("$direccion");?></td>
+			   <td><?echo("$telefono");?></td>
+			   <td><?echo("$login");?></td>
+			   <td><?echo("$pass");?></td>
+			   <td align="center"><input  type="checkbox" name="habilitar" id="habilitar"/></td>
+			   <td><a href="eliminar_usuario.php?codigo=<?echo("$numero");?>"><center><img title="Eliminar Usuario" src="../images/delete.gif"/></center></a></td>
+			   </tr>
+				<?}?>
+			</table>

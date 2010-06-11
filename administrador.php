@@ -15,9 +15,13 @@
 	</div>
 	<div class="contenedor">
 	<form name="form_admin" action="validar_administrador.php" method="POST">
-		<table align="center"><tr>
-			<td>Login:</td> <td><input type="text" name="login_admin" id="login_admin"/> </td></tr>
+		<table align="center">
+		<tr>
+			<td>Login:</td> <td><input type="text" name="login_admin" id="login_admin"/> </td>
+		</tr>
+		<tr>
 			<td>Password:</td> <td><input type="password" name="pass_admin" id="pass_admin"/> </td>
+		</tr>
 			</table>
 				<center><input type="submit" value="Aceptar" class="Button" onclick="return validar_admin()"/></center>
 			

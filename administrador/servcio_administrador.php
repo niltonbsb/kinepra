@@ -14,6 +14,10 @@ function CargarFormulario2(){
   var postString = "";
   new ajax('cambiar_contraseña.php', {postBody: postString, update: 'formulario'}); 
 }
+function CargarFormulario3(){
+  var postString = "";
+  new ajax('cambiar_administrador.php', {postBody: postString, update: 'formulario'}); 
+}
 </script>
 </head>
 <body>
@@ -22,13 +26,14 @@ function CargarFormulario2(){
 		<div class="logo_cabecera"></div>
 	</div>
 	<div class="navegacion">
-	<a onclick="CargarFormulario1()">Crear Usuarios</a>
+	<a onclick="CargarFormulario1()">Usuarios</a>
 	<a onclick="CargarFormulario2()">Cambiar Contraseña</a>
-	<a href="#">Cambiar Administrador</a>
+	<a onclick="CargarFormulario3()">Cambiar Administrador</a>
 	<a href="../index.php">Cerrar Sesion</a>
 	</div>
-	<div class="contenedor" id="formulario">
-	
+	<div class="contenedor" >
+			elija las opciones de administrador
+		<div id="formulario"></div>
 	</div>
 	<div class="pie">
 		<div class="logo_pie"></div>
