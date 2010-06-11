@@ -4,31 +4,31 @@ include("../includes/conexion.php");
 <form name="formulario_usuario" action="" method="GET" >
 <table align="center">
 <tr>
-	<td>Nombre Completo:</td> <td><input type="text" id="nombre_usuario"/><td>
+	<td>Nombre Completo:</td> <td><input type="text" name="nombre_usuario" id="nombre_usuario"/><td>
 </tr>
 <tr>
-	<td>Direccion:</td> <td><input type="text" id="direccion_usuario"/></td>
+	<td>Direccion:</td> <td><input type="text" name="direccion_usuario" id="direccion_usuario"/></td>
 </tr>
 <tr>
-	<td>Telefono:</td> <td><input type="text" id="fono_usuario"/></td>
+	<td>Telefono:</td> <td><input type="text" name="fono_usuario" id="fono_usuario"/></td>
 </tr>
 <tr>
-	<td>Login:</td> <td><input type="text" id="login_usuario"/></td>
+	<td>Login:</td> <td><input type="text" name="login_usuario" id="login_usuario"/></td>
 </tr>
 <tr>
-	<td>Contraseña:</td> <td><input type="text" id="contraseña_usuario"/></td>
+	<td>Contraseña:</td> <td><input type="text" name="contraseña_usuario" id="contraseña_usuario"/></td>
 </tr>
 </table>
 <center><input type="submit" value="ingresar"/></center>
 </form>
-<?
+<?php
 $nombre_usuario=$_GET['nombre_usuario'];
 $direccion_usuario=$_GET['direccion_usuario'];
 $fono=$_GET['fono_usuario'];
 $login_usuario=$_GET['login_usuario'];
 $contraseña_usuario=$_GET['contraseña_usuario'];
-if($nombre_usuario!=null&&$direccion_usuario!=null&&$fono!=null&&$login_usuario!=null&&$contraseña_usuario!=null){
-mysql_query ("INSERT INTO usuarios (nombre_usuario, direccion_usuario, telefono_usuario, login_usuario, pass_usuario, estado)values('$nombre','$direccion','$fono','$login_usuario','$contraseña_usuario',1)");
+if($nombre_usuario!="" && $direccion_usuario!="" && $fono!="" && $login_usuario!="" && $contraseña_usuario!=""){
+mysql_query ("INSERT INTO usuarios (nombre_usuario, direccion_usuario, telefono_usuario, login_usuario, pass_usuario, estado)values('$nombre_usuario','$direccion_usuario','$fono','$login_usuario','$contraseña_usuario',1)");
 }
 ?>
 
