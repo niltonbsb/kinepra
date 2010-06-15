@@ -1,13 +1,13 @@
-<form name="">
+<form name="formulario_cambiar_contrasena" action="cambiar_contrasena_admin.php" method="POST">
 <table align="center">
 <tr>
-<td>Contraseña actual:</td> <td><input type="text" name="nom_usuario"/></td>
+<td>Contrasena actual:</td> <td><input type="text" name="contrasena_actual" id="contrasena_actual"/></td>
 </tr>
 <tr>
-<td>Contrseña Nueva:</td> <td><input type="text" name="apell_usuario"/></td>
+<td>Contrasena Nueva:</td> <td><input type="text" name="contrasena_nueva" id="contrasena_nueva"/></td>
 </tr>
 <tr>
-<td>Repita Contraseña Nueva:</td> <td><input type="text" name="edad_usuario"/></td>
+<td>Repita Contrasena Nueva:</td> <td><input type="text" name="re_contrasena_nueva" id="re_contrasena_nueva"/></td>
 </tr>
 </table>
 <center><input type="submit" value="ingresar"/></center>
