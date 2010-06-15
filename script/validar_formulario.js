@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function validar_admin(){
 	if(document.form_admin.login_admin.value.length==0){
 		window.alert("Tiene que introducir su Login")
@@ -37,30 +36,38 @@ function validar_crear_usuario(){
 		document.formulario_usuario.contrasena_usuario.focus()
 		return (false);
 	}
-=======
-function validar_admin(){
-
-	
-
-	if(document.form_admin.login_admin.value.length==0){
-
-		window.alert("Tiene que introducir su Login")
-
-		document.form_admin.login_admin.focus()
-
+}
+function validar_modificar_contrasena(){
+	if(document.formulario_cambiar_contrasena.contrasena_actual.value.length==0){
+		window.alert("Escriba la Contraseña Actual")
+		document.formulario_cambiar_contrasena.contrasena_actual.focus()
 		return (false);
-
 	}
-
-	if(document.form_admin.pass_admin.value.length==0){
-
-		window.alert("Tiene que introducir su Password")
-
-		document.form_admin.pass_admin.focus()
-
+		if(document.formulario_cambiar_contrasena.contrasena_nueva.value.length==0){
+		window.alert("Escriba la Contraseña Nueva")
+		document.formulario_cambiar_contrasena.contrasena_nueva.focus()
 		return (false);
-
 	}
-
->>>>>>> 8538e65a76199fd513564def51f54d3323b31732
+		if(document.formulario_cambiar_contrasena.re_contrasena_nueva.value.length==0){
+		window.alert("Repita la Contraseña Nueva")
+		document.formulario_cambiar_contrasena.re_contrasena_nueva.focus()
+		return (false);
+	}	
+}
+function validar_modificar_administrador(){
+		if(document.formulario_administrador.nombre_administrador.value.length==0){
+		window.alert("Escriba el Nombre del Nuevo Administrador")
+		document.formulario_administrador.nombre_administrador.focus()
+		return (false);
+	}
+	if(document.formulario_administrador.login_administrador.value.length==0){
+		window.alert("Escriba el Login del Nuevo Administrador")
+		document.formulario_administrador.login_administrador.focus()
+		return (false);
+	}
+		if(document.formulario_administrador.contrasena_administrador.value.length==0){
+		window.alert("Escriba la Contraseña del Nuevo Administrador")
+		document.formulario_administrador.contrasena_administrador.focus()
+		return (false);
+	}
 }

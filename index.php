@@ -10,7 +10,7 @@
 	</div>
 	<div class="navegacion">
 	<a href="administrador.php">ADMINISTRADOR</a>
-	<a href="#">USUARIO</a>
+	<a href="usuario.php">USUARIO</a>
 	</div>
 	<div class="contenedor">
 	<h2>Bienvenido al Sistema de Registro y Reservas de Pacientes para el Consultorio Kinepra</h2>

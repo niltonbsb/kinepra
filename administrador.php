@@ -10,12 +10,13 @@
 		<div class="logo_cabecera"></div>
 	</div>
 	<div class="navegacion">
-	
-	<a href="#">USUARIO</a>
+	<a href="index.php">INICIO</a>
+	<a href="usuario.php">USUARIO</a>
 	</div>
 	<div class="contenedor">
 	<form name="form_admin" action="validar_administrador.php" method="POST">
 		<table align="center">
+		ADMINISTRADOR
 		<tr>
 			<td>Login:</td> <td><input type="text" name="login_admin" id="login_admin"/> </td>
 		</tr>

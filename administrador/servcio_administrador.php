@@ -34,7 +34,7 @@ function CargarFormulario3(){
 	<? include("../includes/conexion.php");
 	$valor=mysql_query("SELECT * FROM administrador WHERE estado=1");
 	$valor1=mysql_fetch_array($valor);
-	 $nombre_admin=$valor1['login_admin'];
+	 $nombre_admin=$valor1['nombre_administrador'];
 	 echo("$nombre_admin");
 	?>
 	</div>
