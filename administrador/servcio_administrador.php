@@ -1,11 +1,76 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<link rel="stylesheet" href="../css/estilos.css" type="text/css"/>
-	<title>Sistema de Registro y Reservas de Pacientes</title>
-	<script type="text/javascript" src="../script/prototype.lite.js"></script>
-    <script type="text/javascript" src="../script/moo.ajax.js"></script>
-    <script type="text/javascript" src="../script/validar_formulario.js"></script>
-    <script type="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Kineprax</title>
+<link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- topPan-->
+<div id="topPan">
+	<h1>Clients and Solutions</h1>
+	<a href="index.html"><img src="../images/logo1.jpg" title="Technical Support" alt="Technical Support" width="372" height="91" border="0" /></a>
+	<ul>
+		<li><a href="administrador.php"><span>Inicio</span></a></li>
+		<li><a href="#">Reservas</a></li>
+		<li><a href="#">Pacientes</a></li>
+		<li><a href="#">Buscar</a></li>
+		<li class="contact"><a href="#" class="contact">Contact</a></li>
+	</ul>
+</div>
+<!--topPan close-->
+<!--bobyPan -->
+<div id="bodyPan">
+
+  <!--rightPan -->
+  <div id="rightPan">
+  <link rel="stylesheet" href="../css/estilos.css" type="text/css"/>
+	
+	
+</head>
+<body>
+<div class="principal">
+	
+	<div class="navegacion">
+	<a href= "javascript:CargarFormulario1()">Usuarios</a>
+	<a href= "javascript:CargarFormulario2()">Cambiar Contraseña</a>
+	<a href= "javascript:CargarFormulario3()">Cambiar Administrador</a>
+	<a href="../index.html">Cerrar Sesion</a>
+	</div>
+	<div class="contenedor">Elija las opciones de administrador
+	<div id="formulario"></div>
+	</div>
+	
+</div>
+  </div>
+</div>
+<!--bodyPan close -->
+<!--mainfooter body-->
+<div id="mainfooterbody">
+  <div id="footerPan">
+  	<div id="footerPanleft">
+    <a href="index.html"><img src="../images/logo2.jpg" title="Technical Support" alt="Technical Support" width="260" height="35" border="0" /></a></div>
+	<ul>
+  <li><a href="administrador.php">Inicio </a>| </li>
+  <li><a href="#">Reservas</a> | </li>
+  <li><a href="#">Pacientes </a>| </li>
+  <li><a href="#">Buscar</a> | </li>
+  <li><a href="#">Contact </a> </li>
+  </ul>	
+  <p>© Todos los derechos reservados</p>
+  <ul class="templateworld">
+  	<li>Design By:</li>
+	<li><a href="http://www.templateworld.com" target="_blank">Mauricio Jaldin</a></li>
+  </ul>
+	</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../script/prototype.lite.js"></script>
+<script type="text/javascript" src="../script/moo.ajax.js"></script>
+<script type="text/javascript">
 
 function CargarFormulario1(){
   var postString = "";
@@ -13,63 +78,13 @@ function CargarFormulario1(){
 }
 function CargarFormulario2(){
   var postString = "";
-  new ajax('cambiar_contraseña.php', {postBody: postString, update: 'formulario'}); 
+  new ajax('cambia.php', {postBody: postString, update: 'formulario'}); 
 }
 function CargarFormulario3(){
   var postString = "";
   new ajax('cambiar_administrador.php', {postBody: postString, update: 'formulario'}); 
 }
 </script>
-</head>
-<body>
-<div class="principal">
-	<div class="cabecera">
-		<div class="logo_cabecera"></div>
-	</div>
-	<div class="navegacion">
-	<a onclick="CargarFormulario1()">Crear Usuarios</a>
-	<a onclick="CargarFormulario2()">Cambiar Contraseña</a>
-	<a onclick="CargarFormulario3()">Cambiar Administrador</a>
-	<a href="../index.php">Cerrar Sesion</a>
-	<? include("../includes/conexion.php");
-	$valor=mysql_query("SELECT * FROM administrador WHERE estado=1");
-	$valor1=mysql_fetch_array($valor);
-	 $nombre_admin=$valor1['nombre_administrador'];
-	 echo("$nombre_admin");
-	?>
-	</div>
-	
-	<div class="contenedor" id="formulario" >
-		
 
-<table align="center" border="1">
-				<tr><td>Nro</td><td>Nombre</td><td>Direccion</td><td>Telefono</td><td>Login</td><td>Password</td><td>Bloquear</td><td>Eliminar</td></tr>
-			<? include("../includes/conexion.php");
-			    $aux=mysql_query("SELECT * FROM usuarios WHERE estado=1");
-			    while($aux1=mysql_fetch_array($aux)){
-			   	$numero=$aux1['id_usuario'];
-			   	$nombre=$aux1['nombre_usuario'];
-			   	$direccion=$aux1['direccion_usuario'];
-			   	$telefono=$aux1['telefono_usuario'];
-			    $login=$aux1['login_usuario'];
-			    $pass=$aux1['pass_usuario'];?>
-			   
-			   	<tr class="fila">
-			   <td><?echo("$numero");?></td>
-			   <td><?echo("$nombre");?></td>
-			   <td><?echo("$direccion");?></td>
-			   <td><?echo("$telefono");?></td>
-			   <td><?echo("$login");?></td>
-			   <td><?echo("$pass");?></td>
-			   <td align="center"><input  type="checkbox" name="habilitar" id="habilitar"/></td>
-			   <td><a href="eliminar_usuario.php?codigo=<?echo("$numero");?>"><center><img title="Eliminar Usuario" src="../images/delete.gif"/></center></a></td>
-			   </tr>
-				<?}?>
-			</table>
-        </div>
-	<div class="pie">
-		<div class="logo_pie"></div>
-	</div>
-</div>
-</body>
-</html>
+	
+

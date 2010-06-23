@@ -14,7 +14,8 @@ if($login=mysql_fetch_array($aux)){
 header( "Location: administrador/servcio_administrador.php" );
 }
 else{
-	?><script>
+?>
+<script>
 	alert('El usuario no existe. Verifique su Login o Password');
 location.href= "administrador.php";
 	</script>

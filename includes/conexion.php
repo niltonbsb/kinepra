@@ -1,7 +1,7 @@
 <?
 $servidor="localhost";
 $usrlogin="root";
-$clave="root";
+$clave="123";
 $db="kinepra_db";
 
 $conexion = mysql_connect($servidor,$usrlogin,$clave) or die ("ERROR EN CONECTAR A LA BASE DE DATOS.");

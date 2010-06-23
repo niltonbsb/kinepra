@@ -6,17 +6,14 @@
 </head>
 <body>
 <div class="principal">
-	<div class="cabecera">
-		<div class="logo_cabecera"></div>
-	</div>
+
 	<div class="navegacion">
-	<a href="index.php">INICIO</a>
-	<a href="usuario.php">USUARIO</a>
+	
+	<a href="#">USUARIO</a>
 	</div>
 	<div class="contenedor">
 	<form name="form_admin" action="validar_administrador.php" method="POST">
 		<table align="center">
-		ADMINISTRADOR
 		<tr>
 			<td>Login:</td> <td><input type="text" name="login_admin" id="login_admin"/> </td>
 		</tr>
@@ -24,13 +21,11 @@
 			<td>Password:</td> <td><input type="password" name="pass_admin" id="pass_admin"/> </td>
 		</tr>
 			</table>
-				<center><input type="submit" value="Aceptar" class="Button" onclick="return validar_admin()"/></center>
+				<center><input type="submit" value="Aceptar" class="Button" onClick="return validar_admin()"/></center>
 			
 		</form> 
 	</div>
-	<div class="pie">
-		<div class="logo_pie"></div>
-	</div>
+	
 </div>
 </body>
 </html>

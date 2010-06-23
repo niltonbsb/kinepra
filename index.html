@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Kineprax</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- topPan-->
+<div id="topPan">
+	<h1>Clients and Solutions</h1>
+	<a href="index.html"><img src="images/logo1.jpg" title="Technical Support" alt="Technical Support" width="372" height="91" border="0" /></a>
+	<ul>
+		<li><a href="administrador.php"><span>Inicio</span></a></li>
+		<li><a href="#">Reservas</a></li>
+		<li><a href="#">Pacientes</a></li>
+		<li><a href="#">Buscar</a></li>
+		<li class="contact"><a href="#" class="contact">Contact</a></li>
+	</ul>
+</div>
+<!--topPan close-->
+<!--bobyPan -->
+<div id="bodyPan">
+
+  <!--rightPan -->
+  <div id="rightPan">
+  <form name="form_admin" action="validar_administrador.php" method="POST">
+		<table align="center">
+		<tr>
+			<td>Login:</td> <td><input type="text" name="login_admin" id="login_admin"/> </td>
+		</tr>
+		<tr>
+			<td>Password:</td> <td><input type="password" name="pass_admin" id="pass_admin"/> </td>
+		</tr>
+			</table>
+				<center><input type="submit" value="Aceptar" class="Button" onClick="return validar_admin()"/></center>
+			
+		</form>
+  </div>
+</div>
+<!--bodyPan close -->
+<!--mainfooter body-->
+<div id="mainfooterbody">
+  <div id="footerPan">
+  	<div id="footerPanleft">
+    <a href="index.html"><img src="images/logo2.jpg" title="Technical Support" alt="Technical Support" width="260" height="35" border="0" /></a></div>
+	<ul>
+  <li><a href="administrador.php">Inicio </a>| </li>
+  <li><a href="#">Reservas</a> | </li>
+  <li><a href="#">Pacientes </a>| </li>
+  <li><a href="#">Buscar</a> | </li>
+  <li><a href="#">Contact </a> </li>
+  </ul>	
+  <p>© Todos los derechos reservados</p>
+  <ul class="templateworld">
+  	<li>Design By:</li>
+	<li><a href="http://www.templateworld.com" target="_blank">Mauricio Jaldin</a></li>
+  </ul>
+	</div>
+</div>
+</body>
+</html>
